@@ -17,6 +17,7 @@ BuildRequires:	perl-Algorithm-Diff
 BuildRequires:	perl-File-BaseDir
 BuildRequires:	perl-File-MimeInfo
 BuildRequires:	perl-Clone
+BuildRequires:	perl-Compress-Zlib
 BuildRequires:	perl-Data-Hierarchy >= 0.17
 BuildRequires:	perl-Locale-Maketext-Lexicon
 BuildRequires:	perl-Locale-Maketext-Simple
