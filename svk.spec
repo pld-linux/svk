@@ -56,14 +56,14 @@ napisany w Perlu i u¿ywa systemu plików Subversion.
 
 %build
 %{__perl} Makefile.PL \
-        INSTALLDIRS=vendor
+	INSTALLDIRS=vendor
 %{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
-        DESTDIR=$RPM_BUILD_ROOT
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
