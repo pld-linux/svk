@@ -5,31 +5,36 @@
 Summary:	SVK - a decentralized version control system
 Summary(pl):	SVK - zdecentralizowany system kontroli wersji
 Name:		svk
-Version:	0.19
+Version:	0.991
 Release:	1
 License:	GPL v1+ or Artistic
 Group:		Development/Version Control
 Source0:	http://search.cpan.org/CPAN/authors/id/C/CL/CLKAO/SVK-%{version}.tar.gz
-# Source0-md5:	0a842eb28dbe1a8e450f68623b6cb1f6
+# Source0-md5:	07be4e5d391b54e9eff288379376e561
 URL:		http://svk.elixus.org/
 BuildRequires:	perl-Algorithm-Annotate
 BuildRequires:	perl-Algorithm-Diff
 BuildRequires:	perl-File-BaseDir
 BuildRequires:	perl-File-MimeInfo
+BuildRequires:	perl-Class-Autouse >= 1.15
 BuildRequires:	perl-Clone
 BuildRequires:	perl-Compress-Zlib
 BuildRequires:	perl-Data-Hierarchy >= 0.17
+BuildRequires:	perl-File-Type
+BuildRequires:	perl-IO-Digest
+BuildRequires:	perl-IO-Pager
 BuildRequires:	perl-Locale-Maketext-Lexicon
 BuildRequires:	perl-Locale-Maketext-Simple
-BuildRequires:	perl-PerlIO-via-dynamic >= 0.2
+BuildRequires:	perl-PerlIO-eol >= 0.13
+BuildRequires:	perl-PerlIO-via-dynamic >= 0.11
 BuildRequires:	perl-PerlIO-via-symlink
 BuildRequires:	perl-Pod-Escapes
 BuildRequires:	perl-Pod-Simple
 BuildRequires:	perl-Regexp-Shellish
-BuildRequires:	perl-SVN-Mirror
-BuildRequires:	perl-SVN-Simple
+BuildRequires:	perl-SVN-Mirror >= 0.57
+BuildRequires:	perl-SVN-Simple >= 0.27
 BuildRequires:	perl-Text-Diff
-BuildRequires:	perl-YAML
+BuildRequires:	perl-YAML >= 0.36
 BuildRequires:	perl-devel >= 1:5.8.4
 BuildRequires:	perl-subversion >= 1.0.3
 BuildRequires:	rpm-perlprov >= 4.1-13
