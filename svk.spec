@@ -5,12 +5,12 @@
 Summary:	SVK - a decentralized version control system
 Summary(pl):	SVK - zdecentralizowany system kontroli wersji
 Name:		svk
-Version:	0.991
+Version:	1.00
 Release:	1
 License:	GPL v1+ or Artistic
 Group:		Development/Version Control
 Source0:	http://search.cpan.org/CPAN/authors/id/C/CL/CLKAO/SVK-%{version}.tar.gz
-# Source0-md5:	07be4e5d391b54e9eff288379376e561
+# Source0-md5:	19b89329de175720d25a8b784b04ae1f
 URL:		http://svk.elixus.org/
 BuildRequires:	perl-Algorithm-Annotate
 BuildRequires:	perl-Algorithm-Diff
@@ -31,7 +31,7 @@ BuildRequires:	perl-PerlIO-via-symlink
 BuildRequires:	perl-Pod-Escapes
 BuildRequires:	perl-Pod-Simple
 BuildRequires:	perl-Regexp-Shellish
-BuildRequires:	perl-SVN-Mirror >= 0.57
+BuildRequires:	perl-SVN-Mirror >= 0.60
 BuildRequires:	perl-SVN-Simple >= 0.27
 BuildRequires:	perl-Text-Diff
 BuildRequires:	perl-YAML >= 0.36
