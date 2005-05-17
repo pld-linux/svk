@@ -6,7 +6,7 @@ Summary:	SVK - a decentralized version control system
 Summary(pl):	SVK - zdecentralizowany system kontroli wersji
 Name:		svk
 Version:	1.00
-Release:	1
+Release:	2
 License:	GPL v1+ or Artistic
 Group:		Development/Version Control
 Source0:	http://search.cpan.org/CPAN/authors/id/C/CL/CLKAO/SVK-%{version}.tar.gz
@@ -14,13 +14,14 @@ Source0:	http://search.cpan.org/CPAN/authors/id/C/CL/CLKAO/SVK-%{version}.tar.gz
 URL:		http://svk.elixus.org/
 BuildRequires:	perl-Algorithm-Annotate
 BuildRequires:	perl-Algorithm-Diff
-BuildRequires:	perl-File-BaseDir
-BuildRequires:	perl-File-MimeInfo
 BuildRequires:	perl-Class-Autouse >= 1.15
 BuildRequires:	perl-Clone
 BuildRequires:	perl-Compress-Zlib
 BuildRequires:	perl-Data-Hierarchy >= 0.17
+BuildRequires:	perl-File-BaseDir
+BuildRequires:	perl-File-MimeInfo
 BuildRequires:	perl-File-Type
+BuildRequires:	perl-FreezeThaw
 BuildRequires:	perl-IO-Digest
 BuildRequires:	perl-IO-Pager
 BuildRequires:	perl-Locale-Maketext-Lexicon
@@ -34,6 +35,7 @@ BuildRequires:	perl-Regexp-Shellish
 BuildRequires:	perl-SVN-Mirror >= 0.60
 BuildRequires:	perl-SVN-Simple >= 0.27
 BuildRequires:	perl-Text-Diff
+BuildRequires:	perl-TimeDate
 BuildRequires:	perl-YAML >= 0.36
 BuildRequires:	perl-devel >= 1:5.8.4
 BuildRequires:	perl-subversion >= 1.0.3
