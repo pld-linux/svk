@@ -12,6 +12,7 @@ Group:		Development/Version Control
 Source0:	http://search.cpan.org/CPAN/authors/id/C/CL/CLKAO/SVK-%{version}.tar.gz
 # Source0-md5:	42f7ac8ba2178695e5a190cd48304f7d
 URL:		http://svk.elixus.org/
+BuildRequires:	resolving-builders-blocking
 BuildRequires:	perl-Algorithm-Annotate
 BuildRequires:	perl-Algorithm-Diff
 BuildRequires:	perl-Class-Autouse >= 1.15
