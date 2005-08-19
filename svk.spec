@@ -33,7 +33,7 @@ BuildRequires:	perl-PerlIO-via-symlink
 BuildRequires:	perl-Pod-Escapes
 BuildRequires:	perl-Pod-Simple
 BuildRequires:	perl-Regexp-Shellish
-BuildRequires:	perl-SVN-Mirror >= 0.60
+BuildRequires:	perl-SVN-Mirror >= 0.66
 BuildRequires:	perl-SVN-Simple >= 0.27
 BuildRequires:	perl-Text-Diff
 BuildRequires:	perl-TimeDate
