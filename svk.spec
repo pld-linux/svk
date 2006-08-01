@@ -1,12 +1,11 @@
-# TODO:
-# - split into svk and perl-svk package
-#
+
 %include	/usr/lib/rpm/macros.perl
+
 Summary:	SVK - a decentralized version control system
 Summary(pl):	SVK - zdecentralizowany system kontroli wersji
 Name:		svk
 Version:	1.08
-Release:	0.1
+Release:	1
 License:	GPL v1+ or Artistic
 Group:		Development/Version Control
 Source0:	http://rt.openfoundry.org/Foundry/Project/Download/Attachment/68506/48158/SVK-%{version}.tar.gz
@@ -61,6 +60,14 @@ ju¿ przenie¶li siê na inny system kontroli wersji, a tak¿e ludzi,
 którzy jeszcze nie zaczêli u¿ywaæ systemu kontroli wersji. Jest
 napisany w Perlu i u¿ywa systemu plików Subversion.
 
+%package -n perl-SVK
+Summary:	SVK Perl modules
+Group:		Development/Languages/Perl
+
+%description -n perl-SVK
+SVK Perl modules.
+
+
 %prep
 %setup -q -n SVK-%{version}
 
@@ -81,6 +88,10 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/*
-%{_mandir}/man[13]/*
+%{_mandir}/man1/*
+
+%files -n perl-SVK
+%defattr(644,root,root,755)
 %{perl_vendorlib}/SVK
 %{perl_vendorlib}/SVK.pm
+%{_mandir}/man3/*
