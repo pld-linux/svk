@@ -62,11 +62,14 @@ napisany w Perlu i u¿ywa systemu plików Subversion.
 
 %package -n perl-SVK
 Summary:	SVK Perl modules
+Summary(pl):	Modu³y Perla SVK
 Group:		Development/Languages/Perl
 
 %description -n perl-SVK
 SVK Perl modules.
 
+%description -n perl-SVK -l pl
+Modu³y Perla SVK.
 
 %prep
 %setup -q -n SVK-%{version}
