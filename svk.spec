@@ -1,42 +1,45 @@
-# TODO:
-# - split into svk and perl-svk package
-#
+
 %include	/usr/lib/rpm/macros.perl
+
 Summary:	SVK - a decentralized version control system
 Summary(pl):	SVK - zdecentralizowany system kontroli wersji
 Name:		svk
-Version:	1.00
+Version:	1.08
 Release:	1
 License:	GPL v1+ or Artistic
 Group:		Development/Version Control
-Source0:	http://search.cpan.org/CPAN/authors/id/C/CL/CLKAO/SVK-%{version}.tar.gz
-# Source0-md5:	19b89329de175720d25a8b784b04ae1f
+Source0:	http://rt.openfoundry.org/Foundry/Project/Download/Attachment/68506/48158/SVK-%{version}.tar.gz
+# Source0-md5:	92a90bf73dfa958fd3633ec50c5798b1
 URL:		http://svk.elixus.org/
 BuildRequires:	perl-Algorithm-Annotate
 BuildRequires:	perl-Algorithm-Diff
-BuildRequires:	perl-File-BaseDir
-BuildRequires:	perl-File-MimeInfo
 BuildRequires:	perl-Class-Autouse >= 1.15
 BuildRequires:	perl-Clone
 BuildRequires:	perl-Compress-Zlib
 BuildRequires:	perl-Data-Hierarchy >= 0.17
+BuildRequires:	perl-File-BaseDir
+BuildRequires:	perl-File-MimeInfo
 BuildRequires:	perl-File-Type
+BuildRequires:	perl-FreezeThaw
 BuildRequires:	perl-IO-Digest
 BuildRequires:	perl-IO-Pager
 BuildRequires:	perl-Locale-Maketext-Lexicon
 BuildRequires:	perl-Locale-Maketext-Simple
+BuildRequires:	perl-PathTools >= 3.18
 BuildRequires:	perl-PerlIO-eol >= 0.13
 BuildRequires:	perl-PerlIO-via-dynamic >= 0.11
 BuildRequires:	perl-PerlIO-via-symlink
 BuildRequires:	perl-Pod-Escapes
 BuildRequires:	perl-Pod-Simple
 BuildRequires:	perl-Regexp-Shellish
-BuildRequires:	perl-SVN-Mirror >= 0.60
+BuildRequires:	perl-SVN-Mirror >= 0.66
 BuildRequires:	perl-SVN-Simple >= 0.27
 BuildRequires:	perl-Text-Diff
+BuildRequires:	perl-TimeDate
 BuildRequires:	perl-YAML >= 0.36
 BuildRequires:	perl-devel >= 1:5.8.4
 BuildRequires:	perl-subversion >= 1.0.3
+#BuildRequires:	resolving-builders-blocking
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -56,6 +59,17 @@ u¿ytkowników innych systemów kontroli wersji, w³±czaj±c ludzi którzy
 ju¿ przenie¶li siê na inny system kontroli wersji, a tak¿e ludzi,
 którzy jeszcze nie zaczêli u¿ywaæ systemu kontroli wersji. Jest
 napisany w Perlu i u¿ywa systemu plików Subversion.
+
+%package -n perl-SVK
+Summary:	SVK Perl modules
+Summary(pl):	Modu³y Perla SVK
+Group:		Development/Languages/Perl
+
+%description -n perl-SVK
+SVK Perl modules.
+
+%description -n perl-SVK -l pl
+Modu³y Perla SVK.
 
 %prep
 %setup -q -n SVK-%{version}
@@ -77,6 +91,10 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/*
-%{_mandir}/man[13]/*
+%{_mandir}/man1/*
+
+%files -n perl-SVK
+%defattr(644,root,root,755)
 %{perl_vendorlib}/SVK
 %{perl_vendorlib}/SVK.pm
+%{_mandir}/man3/*
