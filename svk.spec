@@ -4,28 +4,34 @@
 Summary:	SVK - a decentralized version control system
 Summary(pl):	SVK - zdecentralizowany system kontroli wersji
 Name:		svk
-Version:	1.08
+Version:	2.0.0
 Release:	1
 License:	GPL v1+ or Artistic
 Group:		Development/Version Control
-Source0:	http://rt.openfoundry.org/Foundry/Project/Download/Attachment/68506/48158/SVK-%{version}.tar.gz
-# Source0-md5:	92a90bf73dfa958fd3633ec50c5798b1
-URL:		http://svk.elixus.org/
+Source0:	http://download.bestpractical.com/pub/svk/SVK-v%{version}.tar.gz
+# Source0-md5:	37ff4acde9f9a0f987bde48b32616ab3
+URL:		http://svk.bestpractical.com/
 BuildRequires:	perl-Algorithm-Annotate
-BuildRequires:	perl-Algorithm-Diff
+BuildRequires:	perl-Algorithm-Diff >= 1.1902
+BuildRequires:	perl-App-CLI
 BuildRequires:	perl-Class-Autouse >= 1.15
+BuildRequires:	perl-Class-Data-Inheritable >= 0.04
 BuildRequires:	perl-Clone
 BuildRequires:	perl-Compress-Zlib
 BuildRequires:	perl-Data-Hierarchy >= 0.17
 BuildRequires:	perl-File-BaseDir
 BuildRequires:	perl-File-MimeInfo
+BuildRequires:	perl-File-Spec >= 3.19
+BuildRequires:	perl-File-Temp >= 0.17
 BuildRequires:	perl-File-Type
 BuildRequires:	perl-FreezeThaw
 BuildRequires:	perl-IO-Digest
 BuildRequires:	perl-IO-Pager
+BuildRequires:	perl-List-MoreUtils >= 0.17
 BuildRequires:	perl-Locale-Maketext-Lexicon
 BuildRequires:	perl-Locale-Maketext-Simple
 BuildRequires:	perl-PathTools >= 3.18
+BuildRequires:	perl-Path-Class >= 0.16
 BuildRequires:	perl-PerlIO-eol >= 0.13
 BuildRequires:	perl-PerlIO-via-dynamic >= 0.11
 BuildRequires:	perl-PerlIO-via-symlink
@@ -36,9 +42,12 @@ BuildRequires:	perl-SVN-Mirror >= 0.66
 BuildRequires:	perl-SVN-Simple >= 0.27
 BuildRequires:	perl-Text-Diff
 BuildRequires:	perl-TimeDate
+BuildRequires:	perl-UNIVERSAL-require >= 0.10
 BuildRequires:	perl-YAML >= 0.36
+BuildRequires:	perl-YAML-Syck >= 0.64
 BuildRequires:	perl-devel >= 1:5.8.4
 BuildRequires:	perl-subversion >= 1.0.3
+BuildRequires:	perl-version >= 0.68
 #BuildRequires:	resolving-builders-blocking
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
@@ -72,7 +81,7 @@ SVK Perl modules.
 Modu³y Perla SVK.
 
 %prep
-%setup -q -n SVK-%{version}
+%setup -q -n SVK-v%{version}
 
 %build
 %{__perl} Makefile.PL \
