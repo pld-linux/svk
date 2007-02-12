@@ -2,7 +2,7 @@
 %include	/usr/lib/rpm/macros.perl
 
 Summary:	SVK - a decentralized version control system
-Summary(pl):	SVK - zdecentralizowany system kontroli wersji
+Summary(pl.UTF-8):   SVK - zdecentralizowany system kontroli wersji
 Name:		svk
 Version:	2.0.0
 Release:	1
@@ -61,24 +61,24 @@ have already switched to another version control system, as well as
 people who have not yet started using a version control system. It is
 written in Perl and uses Subversion's underlying filesystem.
 
-%description -l pl
+%description -l pl.UTF-8
 svk to zdecentralizowany system kontroli wersji. O ile celem
-Subversion (svn) jest przejêcie u¿ytkowników CVS, svk próbuje przej±æ
-u¿ytkowników innych systemów kontroli wersji, w³±czaj±c ludzi którzy
-ju¿ przenie¶li siê na inny system kontroli wersji, a tak¿e ludzi,
-którzy jeszcze nie zaczêli u¿ywaæ systemu kontroli wersji. Jest
-napisany w Perlu i u¿ywa systemu plików Subversion.
+Subversion (svn) jest przejÄ™cie uÅ¼ytkownikÃ³w CVS, svk prÃ³buje przejÄ…Ä‡
+uÅ¼ytkownikÃ³w innych systemÃ³w kontroli wersji, wÅ‚Ä…czajÄ…c ludzi ktÃ³rzy
+juÅ¼ przenieÅ›li siÄ™ na inny system kontroli wersji, a takÅ¼e ludzi,
+ktÃ³rzy jeszcze nie zaczÄ™li uÅ¼ywaÄ‡ systemu kontroli wersji. Jest
+napisany w Perlu i uÅ¼ywa systemu plikÃ³w Subversion.
 
 %package -n perl-SVK
 Summary:	SVK Perl modules
-Summary(pl):	Modu³y Perla SVK
+Summary(pl.UTF-8):   ModuÅ‚y Perla SVK
 Group:		Development/Languages/Perl
 
 %description -n perl-SVK
 SVK Perl modules.
 
-%description -n perl-SVK -l pl
-Modu³y Perla SVK.
+%description -n perl-SVK -l pl.UTF-8
+ModuÅ‚y Perla SVK.
 
 %prep
 %setup -q -n SVK-v%{version}
