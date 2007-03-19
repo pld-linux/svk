@@ -21,15 +21,15 @@ BuildRequires:	perl-Compress-Zlib
 BuildRequires:	perl-Data-Hierarchy >= 0.17
 BuildRequires:	perl-File-BaseDir
 BuildRequires:	perl-File-MimeInfo
-BuildRequires:	perl-File-Spec >= 3.19
+BuildRequires:	perl(File::Spec) >= 3.19
 BuildRequires:	perl-File-Temp >= 0.17
 BuildRequires:	perl-File-Type
 BuildRequires:	perl-FreezeThaw
 BuildRequires:	perl-IO-Digest
 BuildRequires:	perl-IO-Pager
 BuildRequires:	perl-List-MoreUtils >= 0.17
-BuildRequires:	perl-Locale-Maketext-Lexicon
-BuildRequires:	perl-Locale-Maketext-Simple
+BuildRequires:	perl-Locale-Maketext-Lexicon >= 1:0.62
+BuildRequires:	perl-Locale-Maketext-Simple >= 0.16
 BuildRequires:	perl-PathTools >= 3.18
 BuildRequires:	perl-Path-Class >= 0.16
 BuildRequires:	perl-PerlIO-eol >= 0.13
@@ -52,6 +52,8 @@ BuildRequires:	perl-version >= 0.68
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+
+%define		_noautoreq	'perl(SVK::.*)'
 
 %description
 svk is a decentralized version control system. While Subversion (svn)
