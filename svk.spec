@@ -5,7 +5,7 @@ Summary:	SVK - a decentralized version control system
 Summary(pl.UTF-8):	SVK - zdecentralizowany system kontroli wersji
 Name:		svk
 Version:	2.0.0
-Release:	1
+Release:	2
 License:	GPL v1+ or Artistic
 Group:		Development/Version Control
 Source0:	http://download.bestpractical.com/pub/svk/SVK-v%{version}.tar.gz
