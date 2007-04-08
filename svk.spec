@@ -30,6 +30,7 @@ BuildRequires:	perl-IO-Pager
 BuildRequires:	perl-List-MoreUtils >= 0.17
 BuildRequires:	perl-Locale-Maketext-Lexicon >= 1:0.62
 BuildRequires:	perl-Locale-Maketext-Simple >= 0.16
+BuildRequires:	perl-Log-Log4perl >= 1.10
 BuildRequires:	perl-PathTools >= 3.18
 BuildRequires:	perl-Path-Class >= 0.16
 BuildRequires:	perl-PerlIO-eol >= 0.13
@@ -50,6 +51,7 @@ BuildRequires:	perl-subversion >= 1.0.3
 BuildRequires:	perl-version >= 0.68
 #BuildRequires:	resolving-builders-blocking
 BuildRequires:	rpm-perlprov >= 4.1-13
+Requires:		perl-SVK = %{version}-%{release}
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
