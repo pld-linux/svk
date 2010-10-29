@@ -1,16 +1,15 @@
-
 %include	/usr/lib/rpm/macros.perl
-
 Summary:	SVK - a decentralized version control system
 Summary(pl.UTF-8):	SVK - zdecentralizowany system kontroli wersji
 Name:		svk
 Version:	2.2.1
-Release:	1
+Release:	2
 License:	GPL v1+ or Artistic
 Group:		Development/Version Control
 Source0:	http://search.cpan.org/CPAN/authors/id/C/CL/CLKAO/SVK-v%{version}.tar.gz
 # Source0-md5:	5778f876a744acebde5c9bff0bb865ce
 URL:		http://svk.bestpractical.com/
+BuildRequires:	perl(File::Spec) >= 3.19
 BuildRequires:	perl-Algorithm-Annotate
 BuildRequires:	perl-Algorithm-Diff >= 1.1902
 BuildRequires:	perl-App-CLI
@@ -21,7 +20,6 @@ BuildRequires:	perl-Compress-Zlib
 BuildRequires:	perl-Data-Hierarchy >= 0.17
 BuildRequires:	perl-File-BaseDir
 BuildRequires:	perl-File-MimeInfo
-BuildRequires:	perl(File::Spec) >= 3.19
 BuildRequires:	perl-File-Temp >= 0.17
 BuildRequires:	perl-File-Type
 BuildRequires:	perl-FreezeThaw
@@ -31,17 +29,21 @@ BuildRequires:	perl-List-MoreUtils >= 0.17
 BuildRequires:	perl-Locale-Maketext-Lexicon >= 1:0.62
 BuildRequires:	perl-Locale-Maketext-Simple >= 0.16
 BuildRequires:	perl-Log-Log4perl >= 1.10
-BuildRequires:	perl-PathTools >= 3.18
 BuildRequires:	perl-Path-Class >= 0.16
+BuildRequires:	perl-PathTools >= 3.18
 BuildRequires:	perl-PerlIO-eol >= 0.13
+BuildRequires:	perl-PerlIO-gzip
+BuildRequires:	perl-PerlIO-via-Bzip2
 BuildRequires:	perl-PerlIO-via-dynamic >= 0.11
 BuildRequires:	perl-PerlIO-via-symlink
 BuildRequires:	perl-Pod-Escapes
 BuildRequires:	perl-Pod-Simple
 BuildRequires:	perl-Regexp-Shellish
+BuildRequires:	perl-SVN-Dump >= 0.04
 BuildRequires:	perl-SVN-Mirror >= 0.66
 BuildRequires:	perl-SVN-Simple >= 0.27
 BuildRequires:	perl-Text-Diff
+BuildRequires:	perl-Time-Progress
 BuildRequires:	perl-TimeDate
 BuildRequires:	perl-UNIVERSAL-require >= 0.10
 BuildRequires:	perl-YAML >= 0.36
@@ -56,10 +58,11 @@ Requires:	perl-Class-Accessor
 Requires:	perl-Class-Data-Inheritable
 Requires:	perl-SVK = %{version}-%{release}
 Requires:	perl-Term-ReadKey
+Suggests:	perl-SVN-Mirror
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_noautoreq	'perl(SVK::.*)'
+%define		_noautoreq	perl(SVK::.*)
 
 %description
 svk is a decentralized version control system. While Subversion (svn)
@@ -98,20 +101,22 @@ Moduły Perla SVK.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
+
+rm -f $RPM_BUILD_ROOT%{perl_archlib}/perllocal.pod
+rm -f $RPM_BUILD_ROOT%{perl_vendorarch}/auto/SVK/.packlist
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_bindir}/*
-%{_mandir}/man1/*
+%attr(755,root,root) %{_bindir}/svk
+%{_mandir}/man1/svk.1p*
 
 %files -n perl-SVK
 %defattr(644,root,root,755)
 %{perl_vendorlib}/SVK
 %{perl_vendorlib}/SVK.pm
-%{_mandir}/man3/*
+%{_mandir}/man3/SVK*.3pm*
