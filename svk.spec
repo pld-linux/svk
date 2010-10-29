@@ -14,6 +14,7 @@ BuildRequires:	perl(File::Spec) >= 3.19
 BuildRequires:	perl-Algorithm-Annotate
 BuildRequires:	perl-Algorithm-Diff >= 1.1902
 BuildRequires:	perl-App-CLI
+BuildRequires:	perl-Class-Accessor
 BuildRequires:	perl-Class-Autouse >= 1.15
 BuildRequires:	perl-Class-Data-Inheritable >= 0.04
 BuildRequires:	perl-Clone
@@ -43,6 +44,7 @@ BuildRequires:	perl-Regexp-Shellish
 BuildRequires:	perl-SVN-Dump >= 0.04
 BuildRequires:	perl-SVN-Mirror >= 0.66
 BuildRequires:	perl-SVN-Simple >= 0.27
+BuildRequires:	perl-Term-ReadKey
 BuildRequires:	perl-Text-Diff
 BuildRequires:	perl-Time-Progress
 BuildRequires:	perl-TimeDate
@@ -52,7 +54,6 @@ BuildRequires:	perl-YAML-Syck >= 0.64
 BuildRequires:	perl-devel >= 1:5.8.4
 BuildRequires:	perl-subversion >= 1.0.3
 BuildRequires:	perl-version >= 0.68
-#BuildRequires:	resolving-builders-blocking
 BuildRequires:	rpm-perlprov >= 4.1-13
 Requires:	perl-App-CLI
 Requires:	perl-Class-Accessor
