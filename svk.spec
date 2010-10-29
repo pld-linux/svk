@@ -17,13 +17,9 @@ BuildRequires:	perl-App-CLI
 BuildRequires:	perl-Class-Accessor
 BuildRequires:	perl-Class-Autouse >= 1.15
 BuildRequires:	perl-Class-Data-Inheritable >= 0.04
-BuildRequires:	perl-Clone
 BuildRequires:	perl-Compress-Zlib
 BuildRequires:	perl-Data-Hierarchy >= 0.17
-BuildRequires:	perl-File-BaseDir
-BuildRequires:	perl-File-MimeInfo
 BuildRequires:	perl-File-Temp >= 0.17
-BuildRequires:	perl-File-Type
 BuildRequires:	perl-FreezeThaw
 BuildRequires:	perl-IO-Digest
 BuildRequires:	perl-IO-Pager
@@ -40,16 +36,12 @@ BuildRequires:	perl-PerlIO-via-dynamic >= 0.11
 BuildRequires:	perl-PerlIO-via-symlink
 BuildRequires:	perl-Pod-Escapes
 BuildRequires:	perl-Pod-Simple
-BuildRequires:	perl-Regexp-Shellish
 BuildRequires:	perl-SVN-Dump >= 0.04
 BuildRequires:	perl-SVN-Mirror >= 0.66
 BuildRequires:	perl-SVN-Simple >= 0.27
 BuildRequires:	perl-Term-ReadKey
-BuildRequires:	perl-Text-Diff
 BuildRequires:	perl-Time-Progress
-BuildRequires:	perl-TimeDate
 BuildRequires:	perl-UNIVERSAL-require >= 0.10
-BuildRequires:	perl-YAML >= 0.36
 BuildRequires:	perl-YAML-Syck >= 0.64
 BuildRequires:	perl-devel >= 1:5.8.4
 BuildRequires:	perl-subversion >= 1.0.3
